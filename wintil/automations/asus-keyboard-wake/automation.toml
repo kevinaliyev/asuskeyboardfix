@@ -1,0 +1,17 @@
+[automation]
+name = "asus-keyboard-wake"
+description = "Hardware recovery fix for ASUS N-KEY sleep/wake and inactivity freeze"
+enabled = true
+
+[triggers]
+on_startup = true
+on_wake = true
+on_inactivity_resume = true
+inactivity_threshold_secs = 60
+
+[execution]
+script = "fix.ps1"
+
+[subdaemon]
+is_subdaemon = true
+display_name = "ASUS Keyboard Recovery Supervisor"
